@@ -1,0 +1,18 @@
+defaultTasks 'clean', 'compileJava', 'test'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+// BetterProgrammer requires 1.5-1.6 source
+sourceCompatibility = 1.6
+
+compileJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+repositories {
+    mavenCentral()
+}
